@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebMaster.master.cs" Inherits="BTL_ToChucSuKien.Web.WebMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <form id="form" runat="server">
+        <div class="container">
+            <div class="header">
+                <div class="left-header">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./images/logo_asp.png" alt="logo"></a>
+                    </div>
+                    <h1>CÔNG TY TNHH NGHĨA PHÁT</h1>
+                </div>
+                <div class="right-header">
+                    <ul class="nav-links">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li>
+                            <a href="#">Dịch vụ</a>
+                            <div class="mega-box">
+                                <div class="content">
+                                    <div class="row">
+                                        <img src="./images/even-maga.jpg">
+                                    </div>
+                                    <div class="row">
+                                        <header>Tổ chức hội nghị</header>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Hội nghị hội thảo</a></li>
+                                            <li><a href="#">Hội nghị khách hàng</a></li>
+                                            <li><a href="#">Ra mắt sản phẩm mới</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <header>Tổ chức sự kiện</header>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Kỷ niệm thành lập</a></li>
+                                            <li><a href="#">Khai trương, khánh thành</a></li>
+                                            <li><a href="#">Tất niên cuối năm</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <header>Sự kiện gắn kết</header>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Tổ chức trung thu</a></li>
+                                            <li><a href="#">Ngày hội gia đình</a></li>
+                                            <li><a href="#">Tổ chức họp lớp</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#">Thuê thiết bị</a></li>
+                        <li><a href="#">Sự kiện đã tổ chức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li>
+                            <asp:LinkButton ID="lbLogin" runat="server" OnClick="lbLogin_Click">Đăng nhập</asp:LinkButton></li>
+                        <li>
+                            <asp:Literal ID="ltrUserName" runat="server"></asp:Literal></li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="lbLogout" OnClick="hlLogout_Click">Đăng xuất</asp:LinkButton></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="left box">
+                        <h2>Về chúng tôi</h2>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente unde doloremque odit
+                            ducimus! Aliquam, nesciunt. Reiciendis consequatur necessitatibus impedit ex!
+                            </p>
+                            <div class="social">
+                                <a href="#"><span class="fab fa-facebook-f"></span></a>
+                                <a href="#"><span class="fab fa-twitter"></span></a>
+                                <a href="#"><span class="fab fa-instagram"></span></a>
+                                <a href="#"><span class="fab fa-youtube"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center box">
+                        <h2>Địa chỉ</h2>
+                        <div class="content">
+                            <div class="place">
+                                <span class="fas fa-map-marker-alt"></span>
+                                <span class="text">26 Đường La Thành, Ngọc Khánh, Ba Đình, Hà Nội</span>
+                            </div>
+                            <div class="phone">
+                                <span class="fas fa-phone-alt"></span>
+                                <span class="text">Hotline: +842-158-383</span>
+                            </div>
+                            <div class="email">
+                                <span class="fas fa-envelope"></span>
+                                <span class="text">nghiaphat@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right box">
+                        <h2>Liên hệ</h2>
+                        <div class="content">
+                            <form action="#">
+                                <div class="email">
+                                    <div class="text">Email *</div>
+                                    <input type="email" required>
+                                </div>
+                                <div class="msg">
+                                    <div class="text">Lời nhắn *</div>
+                                    <textarea rows="3" cols="40" required></textarea>
+                                </div>
+                                <div class="btn">
+                                    <button>Gửi lời nhắn</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">Ha Noi University of Industry - 2020</div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
